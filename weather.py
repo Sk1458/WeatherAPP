@@ -2,7 +2,7 @@ import requests
 from dotenv import load_dotenv
 import os
 from dataclasses import dataclass
-from dataclasses import dataclass
+
 @dataclass
 class WeatherData:
     main: str
@@ -38,9 +38,9 @@ def get_current_weather(lat, lon, API_key):
 
 def main(city_name, state_name, country_name):
     lat, lon = get_lat_lon(city_name, state_name, country_name, api_key)
-    WeatherData = get_current_weather(lat, lon, api_key)
-    return WeatherData
+    weather_data = get_current_weather(lat, lon, api_key)
+    return weather_data
 
 if __name__ == "__main__" :
-    lat, lon = get_lat_lon('vijayawada', 'AP', 'India', api_key)
+    lat, lon = get_lat_lon('Kakinada', 'AP', 'India', api_key)
     print(get_current_weather(lat, lon, api_key))

@@ -1,1 +1,1 @@
-# WeatherApp made by using pyhton flask for backend
+# WeatherApp made by using python flask as backend
